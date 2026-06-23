@@ -7,7 +7,12 @@ services:
     restart: unless-stopped
     ports:
       - "3000:3000"
+    networks:
+      - supabase_net
     environment:
       - NODE_ENV=production
-      # Aquí puedes sobrescribir variables de entorno en el servidor si lo necesitas
-      # - NEXT_PUBLIC_SUPABASE_URL=https://db.trianguloacademy.com
+
+networks:
+  supabase_net:
+    name: supabase_default
+    external: true
