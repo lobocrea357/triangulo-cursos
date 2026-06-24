@@ -6,7 +6,7 @@ services:
     container_name: triangulo-academy-web
     restart: unless-stopped
     ports:
-      - "3000:3000"
+      - "3003:3000"
     networks:
       - supabase_net
     environment:
